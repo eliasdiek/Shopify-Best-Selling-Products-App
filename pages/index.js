@@ -5,7 +5,7 @@ function Index() {
         <Page>
             <Layout>
                 <EmptyState
-                  heading="Manage your inventory transfers"
+                  heading="Select the best selling products to show on your storefront."
                   action={{content: 'Select Products'}}
                   image="https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg"
                 >
