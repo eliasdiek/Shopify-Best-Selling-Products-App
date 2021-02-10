@@ -14,7 +14,10 @@ const makeApp = products => {
                 <h3>Our Best Sellers</h3>
                 ${products.map(item => {
                     return `
-                        <p>${item.title}</p>
+                        <a href="/products/${item.handle}" style="display: flex; align-items: center; padding: 20px 10px; border-top: 1px solid black;">
+                            <img src=${item.images[0]} />
+                            <p>${item.title}</p>
+                        </a>
                     `
                 }).join('')}
             </div>`
