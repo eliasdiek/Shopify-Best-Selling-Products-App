@@ -29,7 +29,7 @@ const makeApp = products => {
         .css({
             'position': 'fixed',
             'width': '150px',
-            'bottom': '20px',
+            'bottom': '70px',
             'right': '20px',
             'cursor': 'pointer'
         });
@@ -38,7 +38,7 @@ const makeApp = products => {
     body.append(bestSellerContainer);
 
     bestSellerButton.click(() => {
-        bestSellerContainer.sliderToggle();
+        bestSellerContainer.slideToggle();
     });
 }
 
