@@ -16,7 +16,7 @@ const makeApp = products => {
                     return `
                         <p>${item.title}</p>
                     `
-                })}
+                }).join('')}
             </div>`
         )
         .css({
