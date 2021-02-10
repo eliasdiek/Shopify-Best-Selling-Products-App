@@ -57,7 +57,7 @@ function ScriptPage() {
         <Page>
             <Layout>
                 <Layout.Section>
-                    <Card title="There are the Script Tags:">
+                    <Card title="There are the Script Tags:" sectioned>
                         <p>
                             Create or Delete a Script Tag
                         </p>
