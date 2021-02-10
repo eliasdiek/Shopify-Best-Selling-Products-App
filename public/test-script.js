@@ -11,7 +11,7 @@ const shop = Shopify.shop;
 const makeApp = products => {
     const bestSellerContainer = $(
             `<div>
-                <h3>Our Best Sellers</h3>
+                <h3 style="padding: 20px 10px;">Our Best Sellers</h3>
                 ${products.map(item => {
                     return `
                         <a href="/products/${item.handle}" style="display: flex; align-items: center; padding: 20px 10px; border-top: 1px solid black;">
