@@ -2,7 +2,7 @@ console.log('[This is coming from script tag API]');
 
 const header = $('header.site-header').parent();
 
-const makeheader = data => {
+const makeHeader = data => {
     header.prepend(`<div style="background-color: red; text-align: center">${data}</div>`);
 }
 
