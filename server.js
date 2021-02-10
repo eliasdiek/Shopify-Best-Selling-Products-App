@@ -64,7 +64,7 @@ app.prepare().then(() => {
   server.use(verifyRequest());
 
   // Router Middleware
-  server.use(router.allowedMethods);
+  server.use(router.allowedMethods());
   server.use(router.routes());
 
   server.use(async (ctx) => {
