@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { EmptyState, Layout, Page } from '@shopify/polaris';
 import { ResourcePicker } from '@shopify/app-bridge-react';
 import store from 'store-js';
-import ProductList from '../components/ResourceList';
+import ProductList from '../components/ProductList';
 
 function Index() {
     const [modal, setModal] = useState({ open: false });
@@ -23,22 +23,20 @@ function Index() {
                 open={modal.open}
                 onCancel={() => setModal({ open: false })}
                 onSelection={(resources) => handleSelection(resources)}
-            />
+        />
+            { emptyState ? 
             <Layout>
-                { emptyState ? 
                 <EmptyState
-                  heading="Select the best selling products to show on your store wide."
-                  action={{
-                      content: 'Select Products',
-                      onAction: () => setModal({ open: true })
+                heading="Select the best selling products to show on your store wide."
+                action={{
+                    content: 'Select Products',
+                    onAction: () => setModal({ open: true })
                     }}
-                  image="https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg"
-                >
-                    <p>Select Products</p>
-                </EmptyState> 
-                : 
-                <ProductList /> }
+                image="https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg"
+                />
             </Layout>
+            : 
+            <ProductList /> }
         </Page>
     )
 }
