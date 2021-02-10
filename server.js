@@ -30,7 +30,11 @@ router.get('/api/products', async (ctx) => {
   } catch (err) {
     console.log('[err]', error);
   }
-})
+});
+
+// Router Middleware
+server.use(router.allowedMethods());
+server.use(router.routes());
 
 app.prepare().then(() => {
   const server = new Koa();
@@ -62,10 +66,6 @@ app.prepare().then(() => {
 
   server.use(graphQLProxy({ version: ApiVersion.October20 }))
   server.use(verifyRequest());
-
-  // Router Middleware
-  server.use(router.allowedMethods());
-  server.use(router.routes());
 
   server.use(async (ctx) => {
     await handle(ctx.req, ctx.res);
