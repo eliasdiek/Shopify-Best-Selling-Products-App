@@ -63,7 +63,7 @@ function ScriptPage() {
                         </p>
                     </Card>
                 </Layout.Section>
-                <Layout.Section>
+                <Layout.Section secondary>
                     <Card title="Delete Tag" sectioned>
                         <Button
                             primary
