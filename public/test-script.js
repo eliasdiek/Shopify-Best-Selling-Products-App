@@ -15,7 +15,7 @@ const makeApp = products => {
                 ${products.map(item => {
                     return `
                         <a href="/products/${item.handle}" style="display: flex; align-items: center; padding: 20px 10px; border-top: 1px solid black;">
-                            <img src=${item.images[0].originalSrc} />
+                            <img src=${item.images[0].originalSrc} style="width: 75px;" />
                             <p>${item.title}</p>
                         </a>
                     `
