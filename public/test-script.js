@@ -17,7 +17,7 @@ const makeApp = products => {
                         <a href="/products/${item.handle}" style="display: flex; align-items: center; padding: 20px 10px; border-top: 1px solid black;">
                             <img src=${item.images[0].originalSrc} style="width: 75px; margin-right: 10px;" />
                             <div style="display: flex; justify-content: space-between: align-items: start; width: 100%;">
-                                <p style="white-space: nowrap; width: 200px; overflow: hidden; text-overflow: ellipsis;">${item.title}</p>
+                                <p style="white-space: nowrap; width: 180px; overflow: hidden; text-overflow: ellipsis;">${item.title}</p>
                                 <p>${item.variants[0].price}</p>
                             </div>
                         </a>
