@@ -6,7 +6,7 @@ const makeheader = data => {
     header.prepend(`<div style="background-color: red; text-align: center">${data}</div>`);
 }
 
-fetch('http://cors-anywhere.herokuapp.com/https://54977972cbf7.ngrok.io/api/products?shop=yourdev.myshopify.com')
+fetch('https://cors-anywhere.herokuapp.com/https://54977972cbf7.ngrok.io/api/products?shop=yourdev.myshopify.com')
     .then(res => res.json())
     .then(data => {
         makeHeader(data.data);
