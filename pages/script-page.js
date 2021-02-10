@@ -63,6 +63,26 @@ function ScriptPage() {
                         </p>
                     </Card>
                 </Layout.Section>
+                <Layout.Section>
+                    <Card title="Delete Tag" sectioned>
+                        <Button
+                            primary
+                            size="slim"
+                            type="submit"
+                            onClick={() => {
+                                createScripts({
+                                    variables: {
+                                        input: {
+                                            src: "https://43a7b2f27e19.ngrok.io/test-script.js"
+                                        }
+                                    }
+                                })
+                            }}
+                        >
+                            Create Script Tag
+                        </Button>
+                    </Card>
+                </Layout.Section>
             </Layout>
         </Page>
     )
