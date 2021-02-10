@@ -19,7 +19,7 @@ const makeApp = products => {
             'background-color': '#ffffff',
             'border': '1px solid black',
             'bottom': '88px',
-            'right': '25px',
+            'left': '25px',
             'height': '400px',
             'width': '350px',
             'display': 'none'
@@ -29,8 +29,8 @@ const makeApp = products => {
         .css({
             'position': 'fixed',
             'width': '150px',
-            'bottom': '70px',
-            'right': '20px',
+            'bottom': '20px',
+            'left': '20px',
             'cursor': 'pointer'
         });
     
