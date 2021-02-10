@@ -44,6 +44,7 @@ router.post('/api/products', koaBody(), async (ctx) => {
   try {
     const body = ctx.request.body;
     products.push(body);
+    ctx.body = "Item added";
 
   } catch (error) {
     console.log(error);
