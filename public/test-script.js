@@ -10,7 +10,7 @@ const shop = Shopify.shop;
 
 const makeApp = products => {
     const bestSellerContainer = $(
-            `<div>
+            `<div style="overflow: scroll;">
                 <h3 style="padding: 20px 10px 10px;">Our Best Sellers</h3>
                 ${products.map(item => {
                     return `
