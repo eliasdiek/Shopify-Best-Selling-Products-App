@@ -46,7 +46,7 @@ const makeApp = products => {
 fetch('https://cors-anywhere.herokuapp.com/https://5a2bbde28822.ngrok.io/api/products?shop=yourdev.myshopify.com')
     .then(res => res.json())
     .then(data => {
-        // makeApp(data.data);
+        makeApp(data.data);
         console.log('[data]', data);
     })
     .catch(error => console.log(error));
