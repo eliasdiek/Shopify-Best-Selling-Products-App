@@ -21,7 +21,7 @@ function Index() {
     }
 
     function deleteApiData() {
-        const url = '/api/delete';
+        const url = '/api/products';
 
         axios.delete(url);
     }
