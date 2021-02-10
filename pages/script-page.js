@@ -54,44 +54,17 @@ function ScriptPage() {
     console.log('this is script data', data);
 
     return (
-        <div>
-            <h1>There are the script tags right now!</h1>
-            <button
-                type='submit' onClick={() => {
-                    createScripts({
-                        variables: { 
-                            input: { 
-                                src: "https://43a7b2f27e19.ngrok.io/test-script.js", 
-                                displayScope: "ALL" 
-                            },
-                        },
-                        refetchQueries: [{ query: QUERY_SCRIPT_TAGS }]
-                    })
-                }}
-            >
-                Create Script Tag
-            </button>
-
-            {
-                data.scriptTags.edges.map(item => {
-                    return (
-                        <div key={item.node.id}>
-                            <p>{item.node.id}</p>
-                            <button type='submit' onClick={() => {
-                                deleteScripts({
-                                    variables: {
-                                        id: item.node.id
-                                    },
-                                    refetchQueries: [{query: QUERY_SCRIPT_TAGS}]
-                                })
-                            }}>
-                                Delete Script Tag
-                            </button>
-                        </div>
-                    )
-                })
-            }
-        </div>
+        <Page>
+            <Layout>
+                <Layout.Section>
+                    <Card title="There are the Script Tags:">
+                        <p>
+                            Create or Delete a Script Tag
+                        </p>
+                    </Card>
+                </Layout.Section>
+            </Layout>
+        </Page>
     )
 }
 
