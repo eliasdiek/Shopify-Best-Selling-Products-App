@@ -18,7 +18,7 @@ const makeApp = products => {
                             <img src=${item.images[0].originalSrc} style="width: 75px; margin-right: 10px;" />
                             <div style="display: flex; justify-content: space-between: align-items: start; width: 100%;">
                                 <p>${item.title}</p>
-                                <p>${item.variables[0].price}</p>
+                                <p>${item.variants[0].price}</p>
                             </div>
                         </a>
                     `
