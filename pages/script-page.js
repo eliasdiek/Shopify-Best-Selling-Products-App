@@ -85,6 +85,42 @@ function ScriptPage() {
                         </Button>
                     </Card>
                 </Layout.Section>
+                <Layout.Section>
+                    <Card>
+                        <ResourceList
+                            showHeader
+                            resourceName={{ singular: 'Script', 'plural': 'Scripts' }}
+                            items={data.scriptTags.edges}
+                            renderItem={item => {
+                                return (
+                                    <ResourceList.Item
+                                        id={item.id}
+                                    >
+                                        <Stack>
+                                            <Stack.Item>
+                                                <p>
+                                                    {item.node.id}
+                                                </p>
+                                            </Stack.Item>
+                                            <Stack.Item>
+                                                <Button type='submit' onClick={() => {
+                                                    deleteScripts({
+                                                        variables: {
+                                                            id: item.node.id
+                                                        },
+                                                        refetchQueries: [{ query: QUERY_SCRIPT_TAGS }]
+                                                    })
+                                                }}>
+                                                    Delete Script Tag
+                                                </Button>
+                                            </Stack.Item>
+                                        </Stack>
+                                    </ResourceList.Item>
+                                )
+                            }}
+                        />
+                    </Card>
+                </Layout.Section>
             </Layout>
         </Page>
     )
