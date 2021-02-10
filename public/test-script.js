@@ -12,6 +12,11 @@ const makeApp = products => {
     const bestSellerContainer = $(
             `<div>
                 <h3>Our Best Sellers</h3>
+                ${products.map(item => {
+                    return `
+                        <p>${item.title}</p>
+                    `
+                })}
             </div>`
         )
         .css({
